@@ -10,6 +10,12 @@ const db = require('../db')
  *    BlogPost.belongsTo(User)
  */
 
+User.hasMany(Problem)
+Problem.belongsTo(User)
+
+Gym.hasMany(Problem)
+Problem.belongsTo(Gym)
+
 /**
  * We'll export all of our models here, so that any time a module needs a model,
  * we can just require it from 'db/models'
